@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Discuss Book</title>
+    <link rel="stylesheet" href="../styles/styles.css">
+
+  </head>
+  <body>
+  <h1>Book Discussion</h1>
+  <a href="/newBook">
+  <button type="button" name="button">Add a new book</button>
+  </a>
+
+
+    <div class="container">
+        <% for(var i = 0; i<book.length; i++){ %>
+            <div class="card">
+             <h3> <%= book[i].title %></h3>
+              <b> <img src="<%= book[i].imgURL %>" alt="book image"></b>
+              <p> <%= book[i].description %></p>
+              <br>
+
+              <h6><a class="delete-book" href="/del/book/<%= book[i].id %>">Delete Book</a></h6>
+
+              <a href="/discussBook/<%=book[i].id%>"
+              <button type="button" name="discuss">Discuss</button>
+              </a>
+
+            </div>
+        <% } %>
+      </div>
+
+
+
+  </body>
+</html>

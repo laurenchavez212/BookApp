@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Authors</title>
+    <link rel="stylesheet" href="../styles.css">
+    <style media="screen">
+        .container{
+          display: flex;
+        }
+        .card{
+          margin:10px;
+          text-align: center;
+          flex:1;
+          border: 1px solid black;
+        }
+      </style>
+  </head>
+  <body>
+  <h1>Authors</h1>
+    <div class="container">
+        <% for(var i = 0; i<author.length; i++){ %>
+            <div class="card">
+               <h3> <%= author[i].name %></h3>
+              <b><%= author[i].bio %></b>
+              <br>
+              <h6><a class="delete-author" href="/del/author/<%= author[i].id %>">Delete Author</a></h6>
+            </div>
+
+        <% } %>
+      </div>
+
+      <a href="/books">
+      <button type="button" name="index">Home Page</button>
+      </a>
+
+
+
+  </body>
+</html>

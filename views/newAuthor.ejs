@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>New Book</title>
+    <link rel="stylesheet" href="../styles.css">
+    <style media="screen">
+        .container{
+          display: flex;
+        }
+        .card{
+          margin:10px;
+          text-align: center;
+          flex:1;
+          border: 1px solid black;
+        }
+      </style>
+  </head>
+  <body>
+
+    <h1>New Book</h1>
+    <form action="/newAuthor" method="POST">
+      <input type="text" name="name" placeholder="Name">
+      <input type="text" name="bio" placeholder="Bio">
+      <input type="submit" value="Create">
+    </form>
+
+
+
+  </body>
+</html>
