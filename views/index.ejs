@@ -3,38 +3,65 @@
 
 <head>
   <meta charset="utf-8">
-  <link rel="stylesheet" href="css/styles.css">
 
+  <!-- Bootstrap CDN -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
-  
+
+  <!-- Style sheet link -->
+  <link rel="stylesheet" href="/css/styles.css">
+
+  <!-- Google Fonts Link -->
+  <link href="https://fonts.googleapis.com/css?family=Merriweather:400,900" rel="stylesheet">
+
+  <!-- Font Awesome CDN -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
   <title>Discuss Book</title>
 
 </head>
 
 <body>
   <h1>Book Discussion</h1>
+  <hr>
+
   <a href="/newBook">
-  <button type="button" name="button">Add a new book</button>
+  <button type="button" name="button" class="newBookBtn">
+   <i class="fa fa-plus" aria-hidden="true"></i> ADD BOOK</button>
+  </a>
+
+  <a href="/authors">
+  <button type="button" name="button" class="newBookBtn">
+   VIEW AUTHORS</button>
   </a>
 
 
-  <div class="container">
-    <% for(var i = 0; i<book.length; i++){ %>
-      <div class="card">
-        <h3> <%= book[i].title %></h3>
-        <b> <img src="<%= book[i].imgURL %>" alt="book image"></b>
-        <p>
-          <%= book[i].description %>
-        </p>
-        <br>
+  <div class="container-fluid books">
+    <div class="row">
 
-        <h6><a class="delete-book" href="/del/book/<%= book[i].id %>">Delete Book</a></h6>
+      <% for(var i = 0; i<book.length; i++){ %>
+        <div class="col-5 colBG">
 
-        <a href="/discussBook/<%=book[i].id%>" <button type="button" name="discuss">Discuss</button>
-              </a>
+          <h3 class="spacing"> <%= book[i].title %></h3>
+          <b class="spacing"> <img src="<%= book[i].imgURL %>" alt="book image"></b>
+          <p class="spacing bookDesc">
+            <%= book[i].description %>
+          </p>
 
-      </div>
-      <% } %>
+          <a href="/discussBook/<%=book[i].id%>">
+          <button class="createBtn" type="button" name="button">Discuss</button>
+          </a>
+
+          <!-- Delete book -->
+          <a class="delete-book" href="/del/book/<%= book[i].id %>">
+          <button class="homeBtn delete" type="button" name="button">
+          <i class="fa fa-trash" aria-hidden="true"></i>
+          </button>
+        </a>
+
+        </div>
+        <% } %>
+    </div>
   </div>
 
 

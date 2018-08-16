@@ -24,7 +24,7 @@ module.exports = {
         bio: req.body.bio
       })
       .then(() => {
-        res.redirect('/authors')
+        res.redirect('/newBook')
       })
   },
 

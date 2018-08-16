@@ -3,30 +3,40 @@
 
 <head>
   <meta charset="utf-8">
-  <link rel="stylesheet" href="css/styles.css">
+  <!-- Bootstrap CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
 
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+  <!-- Style sheet link -->
+    <link rel="stylesheet" href="css/styles.css">
+
+  <!-- Google Fonts Link -->
+  <link href="https://fonts.googleapis.com/css?family=Merriweather:400,900" rel="stylesheet">
+
+  <!-- Font Awesome CDN -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
   <title>Authors</title>
 </head>
 
-<body>
+<body class="author">
+  <!-- Home page link -->
+  <a href="/books">
+    <button class="homeBtn" type="button" name="home"> <i class="fa fa-home" aria-hidden="true"></i> </button>
+  </a>
+  <br>
+
   <h1>Authors</h1>
-  <div class="container">
+  <div class="container authors">
     <% for(var i = 0; i<author.length; i++){ %>
       <div class="card">
         <h3> <%= author[i].name %></h3>
         <b><%= author[i].bio %></b>
         <br>
-        <h6><a class="delete-author" href="/del/author/<%= author[i].id %>">Delete Author</a></h6>
+        <p class="delete"><a class="delete-author" href="/del/author/<%= author[i].id %>"><i class="fa fa-trash" aria-hidden="true"></i> Delete me</a></p>
       </div>
 
       <% } %>
   </div>
-
-  <a href="/books">
-      <button type="button" name="index">Home Page</button>
-      </a>
-
 
 
 </body>

@@ -3,32 +3,43 @@
 
 <head>
   <meta charset="utf-8">
+<!-- Bootstrap CDN -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+
+<!-- Style sheet link -->
   <link rel="stylesheet" href="css/styles.css">
 
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
-  <title>New Book</title>
-  <style media="screen">
-    .container {
-      display: flex;
-    }
+<!-- Google Fonts Link -->
+<link href="https://fonts.googleapis.com/css?family=Merriweather:400,900" rel="stylesheet">
 
-    .card {
-      margin: 10px;
-      text-align: center;
-      flex: 1;
-      border: 1px solid black;
-    }
-  </style>
+<!-- Font Awesome CDN -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <title>New Book</title>
+
 </head>
 
-<body>
+<body class="newBook">
+
+  <!-- Home page link -->
+  <a href="/books">
+    <button class="homeBtn" type="button" name="home"> <i class="fa fa-home" aria-hidden="true"></i> </button>
+  </a>
+
+  <br>
 
   <h1>New Book</h1>
+
+  <!-- New book form -->
   <form action="/newBook" method="POST">
-    <input type="text" name="title" placeholder="Title">
-    <input type="text" name="imgURL" placeholder="IMG Url">
-    <input type="text" name="description" placeholder="Description">
-    <select class="author" name="">
+    <input type="text" name="title" placeholder="Title" required>
+    <br>
+    <input type="text" name="imgURL" placeholder="Image Url" required>
+    <br>
+    <input type="text" name="description" placeholder="Description"required>
+    <br>
+    <!-- Loop of authors -->
+    <select class="" name="" requried>
       <option disabled selected value="">Author</option>
       <% for(var i = 0; i< author.length; i++){ %>
       <option value="<%= author[i].id %>">
@@ -36,11 +47,15 @@
       </option>
       <% } %>
     </select>
-    <input type="submit" value="Create">
+
+    <br>
+
+    <input class="createBtn" type="submit" value="Create">
   </form>
 
+<!-- Add a new author link -->
   <a href="/newAuthor">
-    <button type="button" name="button">Add a new author</button>
+    <button class="newAuthorBtn" type="button" name="button">Add New Author</button>
     </a>
 
 

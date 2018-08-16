@@ -1,21 +1,136 @@
 body {
-  background-color: snow;
+  background-image: url('https://images.pexels.com/photos/997719/pexels-photo-997719.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
+  background-size: auto;
   text-align: center;
+  font-family: 'Merriweather', serif;
 }
 
-media="screen">
-        .container{
-          display: flex;
-        }
-        .card{
-          margin:10px;
-          text-align: center;
-          flex:1;
-          border: 1px solid black;
-        }
+.author {
+  background-image: url('https://images.pexels.com/photos/958164/pexels-photo-958164.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
+  background-size: cover;
+}
+
+.newBook, .discussBook {
+  background-image: url('https://images.pexels.com/photos/6332/coffee-cup-books-home.jpg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
+  background-size: cover;
+}
+
+.row {
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 10px;
+}
+
+img {
+  width: 60%;
+  height: 50%;
+}
+
+.books {
+  margin-top: 2%;
+  padding-left: 12%;
+}
+
+.bookDesc {
+  text-align: left;
+}
+
+h1 {
+  font-size: 4.5em;
+  text-decoration: underline;
+  margin-top: 10px;
+  color: #404040;
+  margin-bottom: 10px;
+  letter-spacing: 1px;
+}
+
+.comments {
+  margin-top: 10px;
+}
+
+p {
+  letter-spacing: 1px;
+}
+
+h3 {
+  font-style: italic;
+}
+
+input, select {
+  height: 45px;
+  width: 430px;
+  margin-bottom: 1%;
+}
+
+form {
+  margin-top: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.discussIMG {
+  height: 300px;
+  width: 350px;
+  float:right;
+  padding-right: 10%;
+}
+
+.discussBook h1 {
+  font-size: 3em;
+}
+
+.moveRight {
+  padding-right: 20%;
+}
+
+.spacing {
+  margin-top: 10px;
+}
+
+.colBG {
+  background-color: ghostwhite;
+  margin-left: 10px;
+  margin-right: 10px;
+  opacity: .84;
+  border: solid 1px #808080;
+}
+
+.eachComment {
+  margin-top: 5px;
+  width: 650px;
+}
 
 
-button {
-  height: 20px;
-  border: black 1px solid;
+.card {
+  margin-bottom: 20px;
+  opacity: .85;
+}
+
+.authors {
+  margin-bottom: 20px;
+}
+
+.delete {
+  font-size: 14px;
+}
+
+
+.homeBtn {
+  height: 40px;
+  width: 45px;
+  border-radius: 10px;
+  color: grey;
+}
+
+.newBookBtn, .createBtn, .newAuthorBtn {
+  height: 45px;
+  width: 155px;
+  border-radius: 10px;
+}
+
+.newAuthorBtn, .newBookBtn {
+  width: 250px;
+  background-color: snow;
+  margin-top: 10px;
+  color: grey;
 }
