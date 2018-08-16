@@ -1,6 +1,7 @@
 //Update the name of the controller below and rename the file.
 const books_controller = require('../controllers/books.js');
-const authors_controller = require('../controllers/authors.js')
+const authors_controller = require('../controllers/authors.js');
+const comments_controller = require('../controllers/comments.js');
 
 module.exports = function(app){
 
@@ -20,6 +21,10 @@ module.exports = function(app){
 
   app.get('/del/book/:id', books_controller.delBook);
 
-  app.get('/del/author/:id', authors_controller.delAuthor)
+  app.get('/del/author/:id', authors_controller.delAuthor);
+
+  app.post('/discussBook/:id', comments_controller.postComment);
+
+  app.get('/del/comment/:id', comments_controller.delComment)
 
 }

@@ -1,0 +1,21 @@
+body {
+  background-color: snow;
+  text-align: center;
+}
+
+media="screen">
+        .container{
+          display: flex;
+        }
+        .card{
+          margin:10px;
+          text-align: center;
+          flex:1;
+          border: 1px solid black;
+        }
+
+
+button {
+  height: 20px;
+  border: black 1px solid;
+}
